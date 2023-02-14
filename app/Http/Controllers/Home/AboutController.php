@@ -62,4 +62,8 @@ class AboutController extends Controller
         } // End Else
 
     } // End Method
+
+    public function HomeAbout() {
+        return view('frontend.about_page');
+    }
 }
