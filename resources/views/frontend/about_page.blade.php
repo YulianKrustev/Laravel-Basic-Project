@@ -38,27 +38,24 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about__image">
-                            <img src="assets/img/images/about_img.png" alt="">
+                            <img src="{{ $aboutPage->about_image }}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="about__content">
                             <div class="section__title">
                                 <span class="sub-title">01 - About me</span>
-                                <h2 class="title">I have transform your ideas into remarkable digital products</h2>
+                                <h2 class="title">{{ $aboutPage->title }}</h2>
                             </div>
                             <div class="about__exp">
                                 <div class="about__exp__icon">
-                                    <img src="assets/img/icons/about_icon.png" alt="">
+                                    <img src="{{ asset('frontend/assets/img/icons/about_icon.png') }} " alt="">
                                 </div>
                                 <div class="about__exp__content">
-                                    <p><span>20+ Years Experience</span> In this game, Means <br> Product Designing</p>
+                                    <p><span>{{ $aboutPage->short_title }}</span></p>
                                 </div>
                             </div>
-                            <p class="desc">I love to work in User Experience & User Interface designing. Because I love
-                                to solve the design problem and find easy and better solutions to solve it. I always try my
-                                best to make good user interface with the best user experience. I have been working as a UX
-                                Designer</p>
+                            <p class="desc">{{ $aboutPage->short_description }}</p>
                             <a href="about.html" class="btn">Download my resume</a>
                         </div>
                     </div>
@@ -91,37 +88,10 @@
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="about" role="tabpanel"
                                     aria-labelledby="about-tab">
-                                    <p class="desc">There are many variations of passages of Lorem Ipsum available, but
-                                        the majority have suffered alteration in some form, by injected humour, or
-                                        randomised words which don't look even slightly believable. If you are going to use
-                                        a passage of lorem ipsum, you need to be sure there isn't anything embarrassing
-                                        hidden in the middle of text. All the lorem ipsum generators on the Internet tend to
-                                        repeat predefined chunks as necessary, making this the first true generator on the
-                                        internet. It uses a dictionary of over 200 Latin words, combined with a handful of
-                                        model sentence structures, to generate Lorem Ipsum which looks reasonable. The
-                                        generated lorem ipsum is therefore always free from repetition, injected humour, or
-                                        non-characteristic words etc.</p>
-                                    <ul class="about__exp__list">
-                                        <li>
-                                            <h5 class="title">User experience design - (Product Design)</h5>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the
-                                                majority have suffered alteration in some form, by injected humour, or
-                                                randomised words which dont look even slightly believable. If you are going
-                                                to unseery.</p>
-                                        </li>
-                                        <li>
-                                            <h5 class="title">Web and user interface design - Development</h5>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the
-                                                majority have suffered alteration in some form, by injected humour, or
-                                                randomised words which dont look even slightly believable. If you are going
-                                                to use a passage of lorem ipsum.</p>
-                                        </li>
-                                        <li>
-                                            <h5 class="title">Interaction design - Animation</h5>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the
-                                                majority have suffered alteration in some form, by injected humour, or
-                                                randomised words which dont look even slightly believable.</p>
-                                        </li>
+                                    <p class="desc">
+                                        {!! $aboutPage->long_description !!}
+                                    </p>
+                                    </li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
@@ -133,7 +103,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 70%;"
                                                             aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">70%</span></div>
+                                                            <span class="percentage">70%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,7 +114,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 90%;"
                                                             aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">90%</span></div>
+                                                            <span class="percentage">90%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -153,7 +125,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 50%;"
                                                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">50%</span></div>
+                                                            <span class="percentage">50%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,7 +136,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 65%;"
                                                             aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">65%</span></div>
+                                                            <span class="percentage">65%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -173,7 +147,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 80%;"
                                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">80%</span></div>
+                                                            <span class="percentage">80%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -183,7 +158,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 45%;"
                                                             aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">45%</span></div>
+                                                            <span class="percentage">45%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -193,7 +169,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 55%;"
                                                             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">55%</span></div>
+                                                            <span class="percentage">55%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,7 +180,8 @@
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" style="width: 85%;"
                                                             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="percentage">85%</span></div>
+                                                            <span class="percentage">85%</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
