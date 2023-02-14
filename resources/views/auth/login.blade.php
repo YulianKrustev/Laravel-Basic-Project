@@ -62,14 +62,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group mb-3 row">
-                                <div class="col-12">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="form-label ms-1" for="customCheck1">Remember me</label>
-                                    </div>
-                                </div>
-                            </div>
+
 
                             <div class="form-group mb-3 text-center row mt-3 pt-1">
                                 <div class="col-12">

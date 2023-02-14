@@ -53,6 +53,10 @@ Route::controller(AboutController::class)->group(function () {
     Route::post('/update/about/', 'UpdateAbout')->name('update.about');
     Route::get('/about', 'HomeAbout')->name('home.about');
     Route::get('/about/multi/image', 'AboutMultiImage')->name('about.multi.image');
+    Route::post('/store/multi/image', 'StoreMultiImage')->name('store.multi.image');
+    Route::get('/all/multi/image', 'AllMultiImage')->name('all.multi.image');
+    Route::get('/edit/multi/image/{id}', 'EditMultiImage')->name('edit.multi.image');
+    Route::post('/update/multi/image', 'updateMultiImage')->name('update.multi.image');
 });
 
 require __DIR__ . '/auth.php';
