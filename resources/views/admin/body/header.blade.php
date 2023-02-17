@@ -12,7 +12,7 @@
                     </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="/dashboard" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                     </span>
@@ -42,8 +42,15 @@
             </div>
 
             @php
-                $id = Auth::user()->id;
-                $adminData = App\Models\User::find($id);
+                
+                if (Auth::check()) {
+                    $id = Auth::user()->id;
+                    $adminData = App\Models\User::find($id);
+                } else {
+                    header('Location: /login');
+                    die();
+                }
+                
             @endphp
 
 

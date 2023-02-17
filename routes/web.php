@@ -7,6 +7,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
+use App\Http\Controllers\Home\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,6 @@ use App\Http\Controllers\Home\BlogCategoryController;
 Route::get('/', function () {
     return view('frontend.index');
 });
-
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -85,5 +82,17 @@ Route::controller(BlogCategoryController::class)->group(function () {
   
     
 });
+
+// Blog All Routes
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/all/blog', 'AllBlog')->name('all.blog');
+    Route::get('/add/blog', 'AddBlog')->name('add.blog');
+    Route::post('/store/blog', 'StoreBlog')->name('store.blog');
+   
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.index');
+})->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
