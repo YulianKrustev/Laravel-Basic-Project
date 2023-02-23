@@ -7,11 +7,12 @@
                     <div class="menu__wrap">
                         <nav class="menu__nav">
                             <div class="logo">
-                                <a href="index.html" class="logo__black">
+                                <a href="\" class="logo__black">
                                     <h1>Logo</h1>
                                 </a>
-                                <a href="index.html" class="logo__white"><img
-                                        src="{{ asset('frontend/assets/img/logo/logo_white.png') }}" alt=""></a>
+                                <a href="\" class="logo__white">
+                                    <h1>Logo</h1>
+                                </a>
                             </div>
                             <div class="navbar__wrap main__menu d-none d-xl-flex">
                                 <ul class="navigation">

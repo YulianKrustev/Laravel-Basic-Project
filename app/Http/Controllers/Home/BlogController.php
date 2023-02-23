@@ -127,5 +127,15 @@ class BlogController extends Controller
             ];
 
             return redirect()->route('all.blog')->with($notification);
-    }
+    } // End Method
+
+
+    public function BlogDetails($id){
+        $allblogs = Blog::latest()->limit(5)->get();
+        $blogs = Blog::findOrFail($id);
+        $blogCategory = BlogCategory::orderBy('blog_category','ASC')->get();
+
+        return view('frontend.blog_details', compact('blogs','allblogs','blogCategory'));
+
+    } // End Method
 }
