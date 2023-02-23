@@ -228,7 +228,8 @@
                                                         src="{{ asset($all->blog_image) }}" alt=""></a>
                                             </div>
                                             <div class="rc__post__content">
-                                                <h5 class="title"><a href="blog-details.html">{{ $all->blog_title }}</a>
+                                                <h5 class="title"><a
+                                                        href="{{ route('blog.details', $all->id) }}">{{ $all->blog_title }}</a>
                                                 </h5>
                                                 <span class="post-date"><i class="fal fa-calendar-alt"></i>
                                                     {{ Carbon\Carbon::parse($all->created_at)->diffForHumans() }}</span>
@@ -246,7 +247,7 @@
 
                                     @foreach ($blogCategory as $category)
                                         <li class="sidebar__cat__item"><a
-                                                href="blog.html">{{ $category->blog_category }}</a></li>
+                                                href="{{ route('category.blog', $category->id)}}">{{ $category->blog_category }}</a></li>
                                     @endforeach
 
 
