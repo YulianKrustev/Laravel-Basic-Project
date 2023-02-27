@@ -24,7 +24,7 @@ use App\Http\Controllers\Home\ContactController;
 
 Route::get('/', function () {
     return view('frontend.index');
-});
+})->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
