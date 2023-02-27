@@ -1,3 +1,15 @@
+@php
+    
+    if (Auth::check()) {
+        $id = Auth::user()->id;
+        $adminData = App\Models\User::find($id);
+    } else {
+        header('Location: /login');
+        die();
+    }
+    
+@endphp
+
 <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
@@ -41,17 +53,7 @@
                 </button>
             </div>
 
-            @php
-                
-                if (Auth::check()) {
-                    $id = Auth::user()->id;
-                    $adminData = App\Models\User::find($id);
-                } else {
-                    header('Location: /login');
-                    die();
-                }
-                
-            @endphp
+
 
 
             <div class="dropdown d-inline-block user-dropdown">
