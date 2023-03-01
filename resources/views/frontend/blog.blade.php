@@ -42,9 +42,9 @@
                         @foreach ($allblogs as $item)
                             <div class="standard__blog__post">
                                 <div class="standard__blog__thumb">
-                                    <a href="blog-details.html"><img src="{{ asset($item->blog_image) }}"
-                                            alt=""></a>
-                                    <a href="blog-details.html" class="blog__link"><i
+                                    <a href="{{ route('blog.details', $item->id) }}"><img
+                                            src="{{ asset($item->blog_image) }}" alt=""></a>
+                                    <a href="{{ route('blog.details', $item->id) }}" class="blog__link"><i
                                             class="far fa-long-arrow-right"></i></a>
                                 </div>
                                 <div class="standard__blog__content">
@@ -66,14 +66,7 @@
                         @endforeach
 
                         <div class="pagination-wrap">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">
-                                            <i class="far fa-long-arrow-left"></i></a></li>
-
-
-                                </ul>
-                            </nav>
+                            {{ $allblogs->links('vendor.pagination.custom') }}
                         </div>
                     </div>
                     <div class="col-lg-4">
